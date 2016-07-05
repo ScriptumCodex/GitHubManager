@@ -28,8 +28,10 @@ g = Github(user,password)
 
 # getting the user's organizations :
 for org in g.get_user("mattben").get_orgs():
-    print "\nOrganization Name:\n "
-    print org.name 
+    print "\n Organization Name:  " + org.name 
+    print "# Private repos : " + str(org.owned_private_repos)
+    print "# Public repos : " + str(org.public_repos) + "\n"
+
 
 # listing the organization's repositories 
     for repo in org.get_repos():

@@ -27,27 +27,18 @@ str(user)
 g = Github()
 
 
-if sys.argv[1] == "all" :
 
 	# getting the user's organizations :
-	for org in g.get_user(user).get_orgs():
-	    print "\nOrganization Name:  " + org.name 
-	    print "# Private repos : " + str(org.owned_private_repos)
-	    print "# Public repos : " + str(org.public_repos) + "\n"
+for org in g.get_user(user).get_orgs():
+	print "\nOrganization Name:  " + org.name 
+	print "# Private repos : " + str(org.owned_private_repos)
+	print "# Public repos : " + str(org.public_repos) + "\n"
 
 
 	# listing the organization's repositories 
-	    for repo in org.get_repos():
-	    	print repo.name 
+	for repo in org.get_repos():
+	    print repo.name 
     
-else: 
-	# getting the user's organizations :
-	for org in g.get_user("mattben").get_orgs():
-	    print "\nOrganization Name:  " + org.name 
-	    print "# Private repos : " + str(org.owned_private_repos)
-	    print "# Public repos : " + str(org.public_repos) + "\n"
-
-
 
 
    

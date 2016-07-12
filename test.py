@@ -82,8 +82,9 @@ def report_orgs(option):
         str(org)
         for repo in org.get_repos() :
             str(repo)
-            if os.path.exists("cd " + base_path + "/" + org.login + "/" + repo.name) :
-                os.system("git fetch -all ")
+            if os.path.exists(base_path + "/" + org.login + "/" + repo.name) :
+                os.chdir(base_path + "/" + org.login + "/" + repo.name)
+                os.system("git fetch --all ")
                 print (org.login + repo.name + " fetched ")
 
             else:

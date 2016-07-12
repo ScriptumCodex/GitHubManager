@@ -31,6 +31,6 @@ example:
     ...
 
   2. ### Make sure to have Python 2.7 up and PyGitHub installed on your computer 
-  3. ### Have a Github account 
+  3. ###Have a Github account 
   
   

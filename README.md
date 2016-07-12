@@ -19,14 +19,18 @@ example:
     it will run 1 and 2 
     
 ## Observation:
-  inside the file.txt each organization must be listed in one line 
-  example:
+  1. inside the file.txt each organization must be listed in one line 
+     example:
   
-  Organization1 
+     Organization1 
   
-  Organization2 
+     Organization2 
   
-  Organization3 
-  ...
+     Organization3 
+  
+    ...
+
+  2. Make sure to have Python 2.7 up and PyGitHub installed on your computer 
+  3. have a Github account 
   
   

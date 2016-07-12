@@ -7,6 +7,7 @@ import socket
 import ssl
 import argparse
 import httplib
+import subprocess
 from github import Github
 from os.path import expanduser
 
@@ -93,7 +94,7 @@ def report_orgs(option):
                     os.mkdir(makedir)
 
 
-                os.system("cd " + base_path + "/" + org.login)
+                os.chdir(base_path + "/" + org.login)
                 os.system("git clone https://github.com/"+org.login+"/"+repo.name)
                 #os.system("git clone https://github.com/"+org.login+"/"+repo.name)
                 print org.login + repo.name + "  cloned"

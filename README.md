@@ -22,8 +22,10 @@ example:
   inside the file.txt each organization must be listed in one line 
   example:
   
-  Organization1 \n
+  Organization1 
+  
   Organization2 
+  
   Organization3 
   ...
   

@@ -16,8 +16,9 @@ example:
 
   3.
     `run.py -f file.txt -u pawpepe` 
+  
     it will run 1 and 2 
-    
+
   4. `run.py -f file.txt -t oAuthToken.txt`
   
     #### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password

@@ -38,6 +38,10 @@ def login(tk):
         token = token.rstrip('\n') 
         return Github(token)
 
+    token = None
+
+    if token: 
+        return Github(token) 
 
     log = raw_input(" login: ")
     str(log)

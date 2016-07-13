@@ -23,8 +23,18 @@ orgFile = arg.file
 username = arg.user 
 token = arg.token
 
+while True:
 
-g = GitBackup.login(token)
+
+	try:
+		g = GitBackup.login(token)
+		break
+	except ValueError:
+		if token:
+			print("path of token file is wrong or the OAuth token is invalid. ")
+			token = raw_input("token file path: ")
+        else : 
+        	print("invalid user or password. try again!")
 
 
 if __name__ == "__main__":

@@ -5,11 +5,11 @@
 `run.py [-f] file.txt [-u] username [-t] OAuth_token.txt` 
 
 example: 
-  1.  
+1.  
     `run.py -f list.txt` 
 
     #### That will backup the repositories of the organizations listed on "list.txt"
-  2. 
+2. 
     `run.py -u pawpepe` 
 
     #### This command will backup organizations and repositories that belong to "pawpepe" 
@@ -17,8 +17,8 @@ example:
 3.
     `run.py -f file.txt -u pawpepe` 
   
-    #### It will run 1 and 2 
-  4. 
+  It will run 1 and 2 
+4. 
     `run.py -f file.txt -t oAuthToken.txt`
   
     #### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password

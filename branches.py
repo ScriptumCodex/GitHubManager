@@ -12,11 +12,10 @@ from os.path import expanduser
 
 
 
-g = Github("90433323be0a5f3b3f74b5e28b18291a47b50874")
+g = Github()
 
 
-# getting the user's organizations :
-for repo in g.get_user().get_repos():
-        
-    for b in repo.get_branches():
-    	print str(b.name)
+
+
+ #### git commands 
+ ## git checkout -track -b origin

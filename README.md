@@ -2,7 +2,7 @@
 
 ### backup(clone or fetch) organizations and its repositories:
 
-`run.py [-f] file.txt [-u] username` 
+`run.py [-f] file.txt [-u] username [-t] OAuth_token.txt` 
 
 example: 
   1.  
@@ -17,6 +17,14 @@ example:
   3.
     `run.py -f file.txt -u pawpepe` 
     it will run 1 and 2 
+    
+  4. `run.py -f file.txt -t oAuthToken.txt`
+  
+    ### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password
+    alternative: Go to the `GitBackup.py` code and replace `False` attribute ( `token = False`) with your OAuth token at `login(tk)`. 
+    * DO NOT upload this code with your token to a Public/Shared repository at Github for security purposes! ( your token are your credentials)
+    
+    
     
 ## Observation:
   1. ### Inside the file.txt each organization must be listed in one line 

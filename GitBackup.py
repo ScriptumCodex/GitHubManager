@@ -30,13 +30,21 @@ def check_base_path():
         return False
 
 
-def login():
+def login(tk):
+
+    if tk:
+        tFile =open(tk,'r')
+        token = tFile.readline()
+        token = token.rstrip('\n') 
+        return Github(token)
+
 
     log = raw_input(" login: ")
     str(log)
     password = raw_input("password: ")
     str(password)
-    return Github(log,password)
+
+    return Github(log, password)
 
 
 def fetch(orgs,repos):

@@ -22,11 +22,15 @@ example:
   
     ### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password
     alternative: Go to the `GitBackup.py` code and replace `False` attribute ( `token = False`)(line 41) with your OAuth token at `login(tk)` function( line 33). 
+
+    * How to create a [OAtuh Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
+
     * DO NOT upload this code with your token to a Public/Shared repository at Github for security purposes! ( your token are your credentials)
     
     
     
-## Observation:
+    
+## Observations:
   1. ### Inside the file.txt each organization must be listed in one line 
      example:
   
@@ -41,5 +45,6 @@ example:
   2. ### Make sure to have Python 2.7 up and PyGitHub installed on your computer 
   
   3. ### Have a Github account 
+  
   
   

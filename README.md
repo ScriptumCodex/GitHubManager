@@ -21,7 +21,7 @@ example:
   4. `run.py -f file.txt -t oAuthToken.txt`
   
     ### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password
-    alternative: Go to the `GitBackup.py` code and replace `False` attribute ( `token = False`) with your OAuth token at `login(tk)`. 
+    alternative: Go to the `GitBackup.py` code and replace `False` attribute ( `token = False`)(line 41) with your OAuth token at `login(tk)` function( line 33). 
     * DO NOT upload this code with your token to a Public/Shared repository at Github for security purposes! ( your token are your credentials)
     
     

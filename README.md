@@ -13,13 +13,12 @@ example:
     `run.py -u pawpepe` 
 
     #### This command will backup organizations and repositories that belong to "pawpepe" 
-
   3.
     `run.py -f file.txt -u pawpepe` 
   
-    it will run 1 and 2 
-
-  4. `run.py -f file.txt -t oAuthToken.txt`
+    #### it will run 1 and 2 
+  4. 
+    `run.py -f file.txt -t oAuthToken.txt`
   
     #### You can provide a path to the file that contains your token. This way you wont be prompt to enter your username/password
     alternative: Go to the `GitBackup.py` code and replace `False` attribute ( `token = False`)(line 41) with your OAuth token at `login(tk)` function( line 33). 

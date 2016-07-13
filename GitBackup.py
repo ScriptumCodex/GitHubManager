@@ -36,9 +36,10 @@ def login(tk):
         tFile =open(tk,'r')
         token = tFile.readline()
         token = token.rstrip('\n') 
+
         return Github(token)
 
-    token = None
+    token = False
 
     if token: 
         return Github(token) 
@@ -125,9 +126,20 @@ def file_organizations(orgFile,g):
         #print_org_info(org)
         backup(org)
                     
-            # listing the organization's repositories
+            # checking out branches that belong to that repositories 
         for repo in org.get_repos():
             print repo.name
+
+
+          
+            
+            for b in repo.get_branches():
+                os.chdir(base_path + "/" + org.login +"/"+repo.name)
+                print str(b.name + "  checking out branches ...")
+                os.system("git checkout -b " + b.name + " origin/"+ b.name)
+
+
+
 
 
 if __name__ == "__main__":

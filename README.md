@@ -26,10 +26,7 @@ example:
     * How to create an [OAtuh Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
 
     * DO NOT upload this code with your token to a Public/Shared repository at Github for security purposes! ( your token are your credentials)
-    
-    
-    
-    
+
 ## Observations:
   1. #### Inside the file.txt each organization must be listed in one line 
      example:

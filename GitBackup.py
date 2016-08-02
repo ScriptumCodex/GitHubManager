@@ -30,13 +30,26 @@ def check_base_path():
         return False
 
 
-def login():
+def login(tk):
+
+    if tk:
+        tFile =open(tk,'r')
+        token = tFile.readline()
+        token = token.rstrip('\n') 
+
+        return Github(token)
+
+    token = False 
+
+    if token: 
+        return Github(token) 
 
     log = raw_input(" login: ")
     str(log)
     password = raw_input("password: ")
     str(password)
-    return Github(log,password)
+
+    return Github(log, password)
 
 
 def fetch(orgs,repos):
@@ -113,9 +126,20 @@ def file_organizations(orgFile,g):
         #print_org_info(org)
         backup(org)
                     
-            # listing the organization's repositories
+            # checking out branches that belong to that repositories 
         for repo in org.get_repos():
             print repo.name
+
+
+          
+            
+            for b in repo.get_branches():
+                os.chdir(base_path + "/" + org.login +"/"+repo.name)
+                print str(b.name + "  checking out branches ...")
+                os.system("git checkout -b " + b.name + " origin/"+ b.name)
+
+
+
 
 
 if __name__ == "__main__":

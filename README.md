@@ -8,11 +8,11 @@ example:
 
 1.  `githubManager.py -f list.txt` 
 
-    #### That will backup the repositories of the organizations listed on "list.txt"
+    #### That will backup/update the repositories of the organizations listed on "list.txt"
     
 2. `githubManager.py -u pawpepe` 
 
-    #### This command will backup organizations and repositories that belong to "pawpepe" 
+    #### This command will backup/update repositories that belong to user "pawpepe" 
   
 3.  `githubManager.py -f file.txt -u pawpepe` 
   

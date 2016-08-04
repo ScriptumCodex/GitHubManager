@@ -28,6 +28,8 @@ while True:
 
 if __name__ == "__main__":
     if orgFile:
+        # backups or updates the all the organizations listes on the provided file 
         GitBackup.file_organizations(orgFile, g)
     if username:
-        GitBackup.report_user(username, g)
+        #backups or updates the all the user reposiotires
+        GitBackup.user_backup(username, g)

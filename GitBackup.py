@@ -108,6 +108,26 @@ def file_organizations(orgFile, g):
                 print str(b.name + "  checking out branches ...")
                 os.system("git checkout -b " + b.name + " origin/" + b.name)
 
+def user_backup(user,g):
+
+
+    for repo in g.get_user(user).get_repos():
+
+        if os.path.exists(base_path + "/" + repo.name):
+
+            os.chdir(base_path + "/" + repo.name)
+            os.system("git fetch --all ")
+
+        else:
+
+            check_base_path()
+            if os.path.exists(base_path + "/" + repo.name) == False:
+
+                os.system("git clone https://github.com/" + user + "/" + repo.name)
+                # os.system("git clone https://github.com/"+org.login+"/"+repo.name)
+                print repo.name + "  cloned"
+
+
 
 if __name__ == "__main__":
     user = raw_input("username: ")

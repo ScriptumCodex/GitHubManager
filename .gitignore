@@ -1,0 +1,10 @@
+.DC_Store
+*.pyc
+*~
+*.swp
+env/
+ORGS.txt
+USERNAME.txt
+TOKEN.txt
+.idea/
+local_settings.py

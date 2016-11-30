@@ -39,9 +39,11 @@ example:
   
     ...
 
-  2. #### Make sure to have Python 2.7 up and PyGitHub installed on your computer 
+  2. #### Make sure to have Python 2.7(it wont work with higher versions of Python) 
   
-  3. #### Have a Github account 
+  3. #### Install PyGitHub on your computer 
+  
+  4. #### Have a Github account 
   
   
   

@@ -114,7 +114,7 @@ def user_backup(user,g):
     for repo in g.get_user(user).get_repos():
 
         if os.path.exists(base_path + "/" + repo.name):
-
+            
             os.chdir(base_path + "/" + repo.name)
             os.system("git fetch --all ")
 
@@ -123,6 +123,7 @@ def user_backup(user,g):
             check_base_path()
             if os.path.exists(base_path + "/" + repo.name) == False:
 
+                os.chdir(base_path + "/")
                 os.system("git clone https://github.com/" + user + "/" + repo.name)
                 # os.system("git clone https://github.com/"+org.login+"/"+repo.name)
                 print repo.name + "  cloned"
